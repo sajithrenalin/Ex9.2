@@ -1,0 +1,21 @@
+/* **************************Social-Links************************** */
+
+.img_s_l
+{
+    width: 25px;
+    padding-top: 10px;
+    padding-bottom:10px;
+    border-radius:15px 15px 15px 15px ;
+}
+.social_link
+{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border-right: 3px solid rgb(197, 178, 4);
+    position: fixed;
+    max-width: 30px;
+    justify-content: center;
+}
+
+/* **************************End-Social-Links************************** */

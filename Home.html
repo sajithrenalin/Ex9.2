@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script>
+        var app = angular.module('myapp', ['ngRoute']);
+        app.config(function ($routeProvider) {
+            $routeProvider.when('/', {
+                templateUrl: 'main.html'
+            })
+                .when("/cont", {
+                templateUrl : "Login.html"
+            })
+                .when('/register', {
+                    templateUrl: 'form.html'
+            })
+                .when('/cal', {
+                    templateUrl: 'Cal.html'
+            })
+        })
+    </script>
+</head>
+
+
+
+<body ng-app="myapp">
+    <div>
+        <h1 style="text-align: center; color: blue;">Karunya Institute of Technology and Sciences</h1>
+    
+        <hr>
+        <table border="0" width="100%">
+            <tr style="text-align: center;">
+                <td><a href="#/!">Home</a></td>
+                <td>|</td>
+                <td><a href="#!register">Registration Form</a></td>
+                <td>|</td>
+                <td><a href="#!cont">Login</a></td>
+                <td>|</td>
+                <td><a href="#!cal">Calender</a></td>
+                <td>|</td>
+                <td><label>Search: </label><input type="Search" placeholder="Search here.."></td>
+            </tr>
+        </table>
+        <hr>
+    </div>
+    <hr>
+    <div ng-view>
+        
+    </div>
+</body>
+
+</html>
